@@ -9,7 +9,14 @@ angular.module('attendees').controller('AttendeesController', ['$scope', '$state
 		$scope.create = function() {
 			// Create new Attendee object
 			var attendee = new Attendees ({
-				name: this.name
+				firstName: this.firstName,
+				lastName: this.lastName,
+				telephone: this.telephone,
+				email: this.email,
+				gender: this.gender,
+				school: this.school,
+				shirt: this.shirt,
+				hearAboutUs: this.hearAboutUs
 			});
 
 			// Redirect after save
@@ -25,7 +32,7 @@ angular.module('attendees').controller('AttendeesController', ['$scope', '$state
 
 		// Remove existing Attendee
 		$scope.remove = function(attendee) {
-			if ( attendee ) { 
+			if ( attendee ) {
 				attendee.$remove();
 
 				for (var i in $scope.attendees) {
@@ -58,9 +65,9 @@ angular.module('attendees').controller('AttendeesController', ['$scope', '$state
 
 		// Find existing Attendee
 		$scope.findOne = function() {
-			$scope.attendee = Attendees.get({ 
+			$scope.attendee = Attendees.get({
 				attendeeId: $stateParams.attendeeId
 			});
 		};
 	}
-]);
+	]);

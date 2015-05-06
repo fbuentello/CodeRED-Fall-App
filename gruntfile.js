@@ -6,9 +6,9 @@ module.exports = function(grunt) {
 		serverViews: ['app/views/**/*.*'],
 		serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js', '!app/tests/'],
 		clientViews: ['public/modules/**/views/**/*.html'],
-		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
+		clientJS: ['public/js/*.js', 'public/modules/**/*.js','public/CodeRedAssets/js/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
-		clientLESS: ['public/modules/**/*.less'],
+		clientLESS: ['public/CodeRedAssets/less/**/*.less','public/modules/**/*.less'],
 		mochaTests: ['app/tests/**/*.js']
 	};
 	grunt.loadNpmTasks('grunt-contrib-less');
@@ -100,7 +100,7 @@ module.exports = function(grunt) {
               paths: ['public/less']
             },
             files: {
-              'public/less/modules.css': 'public/modules/**/css/*.less'
+              'public/less/modules.css': watchFiles.clientLESS
             }
           }
         },

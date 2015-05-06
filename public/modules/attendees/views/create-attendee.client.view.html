@@ -1,23 +1,33 @@
-<section data-ng-controller="AttendeesController">
-    <div class="page-header">
-        <h1>New Attendee</h1>
-    </div>
-    <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="create()" novalidate>
-            <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-default">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-            </fieldset>
-        </form>
-    </div>
+<section id="createAttendee" data-ng-controller="AttendeesController">
+	<div class="page-header">
+		<h2>New Attendee</h2>
+	</div>
+	<span class="input input--madoka">
+		<input class="input__field input__field--madoka" type="text" id="input-31" />
+		<label class="input__label input__label--madoka" for="input-31">
+			<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+				<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+			</svg>
+			<span class="input__label-content input__label-content--madoka">Frequency</span>
+		</label>
+	</span>
+	<span class="input input--madoka">
+		<input class="input__field input__field--madoka" type="text" id="input-32" />
+		<label class="input__label input__label--madoka" for="input-32">
+			<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+				<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+			</svg>
+			<span class="input__label-content input__label-content--madoka">Weight</span>
+		</label>
+	</span>
+	<span class="input input--madoka">
+		<input class="input__field input__field--madoka" type="text" id="input-33" />
+		<label class="input__label input__label--madoka" for="input-33">
+			<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+				<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+			</svg>
+			<span class="input__label-content input__label-content--madoka">Strength</span>
+		</label>
+	</span>
 </section>
+
