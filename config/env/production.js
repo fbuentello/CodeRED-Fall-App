@@ -1,12 +1,8 @@
 'use strict';
-
+var CodeRED = require('../../CodeREDConfig');
 module.exports = {
 	db: {
-		uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean',
-		options: {
-			user: '',
-			pass: ''
-		}
+		uri: CodeRED.development.RED_DB,
 	},
 	log: {
 		// Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
