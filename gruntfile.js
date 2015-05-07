@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		serverViews: ['app/views/**/*.*'],
 		serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js', '!app/tests/'],
 		clientViews: ['public/modules/**/views/**/*.html'],
-		clientJS: ['public/js/*.js', 'public/modules/**/*.js','public/CodeRedAssets/js/*.js'],
+		clientJS: ['public/CodeRedAssets/js/**/*.js','public/js/*.js', 'public/modules/**/*.js','public/CodeRedAssets/js/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
 		clientLESS: ['public/CodeRedAssets/less/**/*.less','public/modules/**/*.less'],
 		mochaTests: ['app/tests/**/*.js']

@@ -1,28 +1,14 @@
 @import 'normalize.less';
 @import 'demo.less';
 // Color variables (appears count calculates by raw css)
-@white: #ffffff; // Appears 10 times
-@grey0: #6a7989; // Appears 5 times
-@litePurple: #7a7593; // Appears 3 times
-@electricBlue: #1784cd; // Appears 3 times
-@peach: #eca29b; // Appears 2 times
-@white1: #f0f0f0; // Appears 2 times
-@grey1: #747981; // Appears 2 times
-@grey2: #b9c1ca; // Appears 2 times
-@white2: #dadada; // Appears 2 times
-@liteRed: #da7071; // Appears 2 times
+@white: #ffffff;
+@grey0: #6a7989;
+@electricBlue: #1784cd;
+@white1: #f0f0f0;
 
-// Width variables (appears count calculates by raw css)
-@width4: 100%; // Appears 40 times
-@width5: 4em; // Appears 2 times
-@width6: 60%; // Appears 2 times
-@width7: 50%; // Appears 2 times
+@fieldsRed: #950C22;
 
-// Height variables (appears count calculates by raw css)
-@height0: calc(100% - 10px); // Appears 2 times
-@height4: 100%; // Appears 16 times
-@height6: 4px; // Appears 2 times
-@height7: 4em; // Appears 2 times
+
 
 .input {
 	position: relative;
@@ -60,9 +46,9 @@
 	width: 40%;
 	color: @grey0;
 	font-weight: bold;
-	font-size: 100%;
+	font-size: 100.25%;
 	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -74,7 +60,7 @@
 .input__label-content {
 	position: relative;
 	display: block;
-	padding: 1.6em 0;
+	padding: 0.6em 0;
 	width: 100%;
 }
 
@@ -91,6 +77,67 @@
 }
 
 /* Individual styles */
+
+
+/* Madoka */
+.input--madoka {
+	margin: 1.1em;
+}
+
+.input__field--madoka {
+	width: 100%;
+	background: transparent;
+	color: @fieldsRed;
+}
+
+.input__label--madoka {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: @fieldsRed;
+	text-align: left;
+	cursor: text;
+}
+
+.input__label-content--madoka {
+	-webkit-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.graphic--madoka {
+	-webkit-transform: scale3d(1, -1, 1);
+	transform: scale3d(1, -1, 1);
+	-webkit-transition: stroke-dashoffset 0.3s;
+	transition: stroke-dashoffset 0.3s;
+	pointer-events: none;
+
+	stroke: @fieldsRed;
+	stroke-width: 6px;
+	stroke-dasharray: 962;
+	stroke-dashoffset: 558;
+}
+
+.input__field--madoka:focus + .input__label--madoka,
+.input--filled .input__label--madoka {
+	cursor: default;
+	pointer-events: none;
+}
+
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
+.input--filled .graphic--madoka {
+	stroke-dashoffset: 0;
+}
+
+.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
+.input--filled .input__label-content--madoka {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(0, 1em, 0);
+	transform: scale3d(1, 1, 1) translate3d(0, 1em, 0);
+	margin-top: 20px;
+}
+
+
 
 /* Haruki */
 
@@ -265,76 +312,6 @@
 	}
 }
 
-/* Kuro */
-.input--kuro {
-	max-width: 320px;
-	margin-bottom: 3em;
-}
-
-.input__field--kuro {
-	width: 100%;
-	background: transparent;
-	color: #9196A1;
-	opacity: 0;
-	text-align: center;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-}
-
-.input__label--kuro {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	color: #df6589;
-	pointer-events: none;
-}
-
-.input__label--kuro::before,
-.input__label--kuro::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	border: 4px solid @grey1;
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
-}
-
-.input__label--kuro::before {
-	border-right: none;
-}
-
-.input__label--kuro::after {
-	left: 50%;
-	border-left: none;
-}
-
-.input__field--kuro:focus,
-.input--filled .input__field--kuro {
-	opacity: 1;
-	-webkit-transition-delay: 0.3s;
-	transition-delay: 0.3s;
-}
-
-.input__field--kuro:focus + .input__label--kuro::before,
-.input--filled .input__label--kuro::before {
-	-webkit-transform: translate3d(-10%, 0, 0);
-	transform: translate3d(-10%, 0, 0);
-}
-
-.input__field--kuro:focus + .input__label--kuro::after,
-.input--filled .input__label--kuro::after {
-	-webkit-transform: translate3d(10%, 0, 0);
-	transform: translate3d(10%, 0, 0);
-}
-
-.input__field--kuro:focus + .input__label--kuro .input__label-content--kuro,
-.input--filled .input__label-content--kuro {
-	-webkit-animation: anim-2 0.3s forwards;
-	animation: anim-2 0.3s forwards;
-}
 
 @-webkit-keyframes anim-2 {
 	50% {
@@ -468,63 +445,22 @@
 	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* Minoru */
-.input__field--minoru {
-	width: 100%;
-	background: #fff;
-	box-shadow: 0px 0px 0px 2px transparent;
-	color: @peach;
-	-webkit-transition: box-shadow 0.3s;
-	transition: box-shadow 0.3s;
-}
-
-.input__label--minoru {
-	padding: 0;
-	width: 100%;
-	text-align: left;
-}
-
-.input__label--minoru::after {
-	content: '';
-  	position: absolute;
-  	top: 0;
-  	z-index: -1;
-  	width: 100%;
-  	height: 4em;
-	box-shadow: 0px 0px 0px 0px;
-	color: rgba(199,152,157, 0.6);
-}
-
-.input__field--minoru:focus {
-	box-shadow: 0px 0px 0px 2px @peach;
-}
-
-.input__field--minoru:focus + .input__label--minoru {
-	pointer-events: none;
-}
-
-.input__field--minoru:focus + .input__label--minoru::after {
-	-webkit-animation: anim-shadow 0.3s forwards;
-	animation: anim-shadow 0.3s forwards;
-}
 
 @-webkit-keyframes anim-shadow {
 	to {
 		box-shadow: 0px 0px 100px 50px;
-    	opacity: 0;
+		opacity: 0;
 	}
 }
 
 @keyframes anim-shadow {
 	to {
 		box-shadow: 0px 0px 100px 50px;
-    	opacity: 0;
+		opacity: 0;
 	}
 }
 
-.input__label-content--minoru {
-	padding: 0.75em 0.15em;
-}
+
 
 /* Yoko */
 .input__field--yoko {
@@ -600,58 +536,6 @@
 .input--filled .input__label--yoko::after {
 	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
 	transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
-}
-
-/* Kyo */
-.input--kyo {
-	z-index: auto;
-}
-
-.input__field--kyo {
-	padding: 0.85em 1.5em;
-	width: 100%;
-	border-radius: 2em;
-	background: #fff;
-	color: #535d92;
-}
-
-.input__label--kyo {
-	z-index: 0;
-	padding: 0 0 0 2em;
-	width: 100%;
-	text-align: left;
-}
-
-.input__label--kyo::after {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	width: 100%;
-	height: 100%;
-	background: rgba(11, 43, 205, 0.6);
-	opacity: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-	pointer-events: none;
-}
-
-.input__label-content--kyo {
-	padding: 0.5em 0;
-}
-
-.input__field--kyo:focus,
-.input__field--kyo:focus +  .input__label--kyo .input__label-content--kyo {
-	z-index: 10000;
-}
-
-.input__field--kyo:focus + .input__label--kyo {
-	color: #fff;
-}
-
-.input__field--kyo:focus + .input__label--kyo::after {
-	opacity: 1;
 }
 
 /* Akira */
@@ -921,63 +805,6 @@
 	transform: scale3d(0.6, 0.6, 1);
 }
 
-/* Madoka */
-.input--madoka {
-	margin: 1.1em;
-}
-
-.input__field--madoka {
-	width: 100%;
-	background: transparent;
-	color: #7A7593;
-}
-
-.input__label--madoka {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	color: #7A7593;
-	text-align: left;
-	cursor: text;
-}
-
-.input__label-content--madoka {
-	-webkit-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
-}
-
-.graphic--madoka {
-	-webkit-transform: scale3d(1, -1, 1);
-	transform: scale3d(1, -1, 1);
-	-webkit-transition: stroke-dashoffset 0.3s;
-	transition: stroke-dashoffset 0.3s;
-	pointer-events: none;
-
-	stroke: #7A7593;
-	stroke-width: 4px;
-	stroke-dasharray: 962;
-	stroke-dashoffset: 558;
-}
-
-.input__field--madoka:focus + .input__label--madoka,
-.input--filled .input__label--madoka {
-	cursor: default;
-	pointer-events: none;
-}
-
-.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
-.input--filled .graphic--madoka {
-	stroke-dashoffset: 0;
-}
-
-.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
-.input--filled .input__label-content--madoka {
-	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
-	transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
-}
-
 /* Kaede */
 .input--kaede {
 	display: block;
@@ -1043,84 +870,3 @@
 	}
 }
 
-/* Isao */
-.input__field--isao {
-	z-index: 10;
-	padding: 0.75em 0.1em 0.25em;
-	width: 100%;
-	background: transparent;
-	color: #afb3b8;
-}
-
-.input__label--isao {
-	position: relative;
-	overflow: hidden;
-	padding: 0;
-	width: 100%;
-	color: @white2;
-	text-align: left;
-}
-
-.input__label--isao::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 7px;
-	background: @white2;
-	-webkit-transform: scale3d(1, 0.4, 1);
-	transform: scale3d(1, 0.4, 1);
-	-webkit-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
-	-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
-	transition: transform 0.3s, background-color 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.input__label--isao::after {
-	content: attr(data-content);
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 0.75em 0.15em;
-	color: @liteRed;
-	opacity: 0;
-	-webkit-transform: translate3d(0, 50%, 0);
-	transform: translate3d(0, 50%, 0);
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	pointer-events: none;
-}
-
-.input__field--isao:focus + .input__label--isao::before {
-	background-color: @liteRed;
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-}
-
-.input__field--isao:focus + .input__label--isao {
-	pointer-events: none;
-}
-
-.input__field--isao:focus + .input__label--isao::after {
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
-
-.input__label-content--isao {
-	padding: 0.75em 0.15em;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.input__field--isao:focus + .input__label--isao .input__label-content--isao {
-	opacity: 0;
-	-webkit-transform: translate3d(0, -50%, 0);
-	transform: translate3d(0, -50%, 0);
-}
