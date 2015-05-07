@@ -1,22 +1,113 @@
 @codeRedColor: #c8102e;
 
+
 #createAttendee {
 
 	margin: 0 auto;
 	text-align: center;
 	overflow: hidden;
 
-	.page-header {
-		background-color: @codeRedColor;
-		h1,h2,h3,h4,h5,h6 {
-			color: #fff;
-		}
+	h1,h2,h3,h4,h5,h6 {
+		color: @codeRedColor;
 	}
-
 
 	.form-horizontal {
 		background-color: @codeRedColor;
 		height: 700px;
 	}
+
+	.btn-signup {
+		padding: 15px 30px;
+		font-size: 24px;
+		color: #fff;
+		outline: 0;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border: 0;
+		overflow: hidden;
+		position: relative;
+		text-decoration: none !important;
+		cursor: pointer;
+		box-shadow: 0px 2px 4px rgba(30, 30, 30, 0.5);
+	}
+
+}
+
+#submitButton, .codropBtn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	z-index: 1;
+
+}
+
+#submitButton:after, .codropBtn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 1 */
+#submitButton, .btn-1 {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+/* Button 1d */
+#submitButton, .btn-1d {
+	overflow: hidden;
+}
+
+#submitButton:after, .btn-1d:after {
+	width: 0;
+	height: 103%;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.btn-1d:hover,
+.btn-1d:active,
+#submitButton:hover,
+#submitButton:active  {
+	color: @codeRedColor;
+}
+
+.btn-1d:hover:after,
+#submitButton:hover:after {
+	width: 90%;
+	opacity: 1;
+}
+
+.btn-1d:active:after,
+#submitButton:active:after {
+	width: 101%;
+	opacity: 1;
 }
 
