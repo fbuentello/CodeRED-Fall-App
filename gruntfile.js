@@ -96,9 +96,6 @@ module.exports = function(grunt) {
 		},
 		less: {
           development: {
-            options: {
-              paths: ['public/less']
-            },
             files: {
               'public/less/modules.css': watchFiles.clientLESS
             }

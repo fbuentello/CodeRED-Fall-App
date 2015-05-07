@@ -18,6 +18,7 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+				'public/lib/bootstrap-material-design/dist/css/material.min.css'
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
@@ -28,7 +29,7 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'
 			]
 		},
-		css: 'public/dist/application.min.css',
+		css: ['public/dist/application.min.css','public/less/modules.css'],
 		js: 'public/dist/application.min.js'
 	},
 	facebook: {

@@ -171,9 +171,6 @@ table {
   font-size: 150%;
   padding: 3em 0;
 }
-.content h2 {
-  margin: 0 0 2em;
-}
 .content p {
   margin: 1em 0;
   padding: 5em 0 0 0;
@@ -420,7 +417,7 @@ body .nomargin-bottom {
   -webkit-transition: stroke-dashoffset 0.3s;
   transition: stroke-dashoffset 0.3s;
   pointer-events: none;
-  stroke: #950c22;
+  stroke: #ffffff;
   stroke-width: 6px;
   stroke-dasharray: 962;
   stroke-dashoffset: 558;
@@ -438,7 +435,7 @@ body .nomargin-bottom {
 .input--filled .input__label-content--madoka {
   -webkit-transform: scale3d(1, 1, 1) translate3d(0, 1em, 0);
   transform: scale3d(1, 1, 1) translate3d(0, 1em, 0);
-  margin-top: 20px;
+  margin-top: 25px;
 }
 /* Haruki */
 .input--haruki {
@@ -1091,9 +1088,6 @@ body .nomargin-bottom {
   font-size: 150%;
   padding: 3em 0;
 }
-.content h2 {
-  margin: 0 0 2em;
-}
 .content p {
   margin: 1em 0;
   padding: 5em 0 0 0;
@@ -1433,25 +1427,6 @@ table {
   background-color: #c8102e;
   height: 700px;
 }
-#createAttendee .btn-signup {
-  padding: 15px 30px;
-  font-size: 24px;
-  color: #fff;
-  outline: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 0;
-  overflow: hidden;
-  position: relative;
-  text-decoration: none !important;
-  cursor: pointer;
-  box-shadow: 0px 2px 4px rgba(30, 30, 30, 0.5);
-}
-#submitButton,
 .codropBtn {
   border: none;
   font-family: inherit;
@@ -1472,7 +1447,6 @@ table {
   transition: all 0.3s;
   z-index: 1;
 }
-#submitButton:after,
 .codropBtn:after {
   content: '';
   position: absolute;
@@ -1482,17 +1456,14 @@ table {
   transition: all 0.3s;
 }
 /* Button 1 */
-#submitButton,
 .btn-1 {
   border: 3px solid #fff;
   color: #fff;
 }
 /* Button 1d */
-#submitButton,
 .btn-1d {
   overflow: hidden;
 }
-#submitButton:after,
 .btn-1d:after {
   width: 0;
   height: 103%;
@@ -1506,19 +1477,21 @@ table {
   transform: translateX(-50%) translateY(-50%);
 }
 .btn-1d:hover,
-.btn-1d:active,
-#submitButton:hover,
-#submitButton:active {
+.btn-1d:active {
   color: #c8102e;
 }
-.btn-1d:hover:after,
-#submitButton:hover:after {
+.btn-1d:hover:after {
   width: 90%;
   opacity: 1;
 }
-.btn-1d:active:after,
-#submitButton:active:after {
+.btn-1d:active:after {
   width: 101%;
   opacity: 1;
 }
 
+.navbar.navbar,
+.navbar-default.navbar {
+  background-color: #c8102e;
+  color: rgba(255, 255, 255, 0.84);
+  border-bottom: 5px solid #AE0E28;
+}
