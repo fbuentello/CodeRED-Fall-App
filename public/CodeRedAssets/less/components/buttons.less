@@ -1,0 +1,179 @@
+/*
+	BUTTONS
+	========================================================================== */
+
+	.codropBtn {
+		.default {
+			border: none;
+			font-family: inherit;
+			font-size: inherit;
+			color: inherit;
+			cursor: pointer;
+			padding: 25px 80px;
+			display: inline-block;
+			margin: 15px 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 700;
+			outline: none;
+			position: relative;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			z-index: 1;
+			.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;);
+			max-width: 249px;
+		}
+		.default;
+
+		&{
+			.codropMixin;
+		}
+
+		&-red {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRedColor,@codeRedColor); }
+
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-orange {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_orange,orange); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-yellow {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_yellow,@codeRed_yellow); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-purple {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_purple,@codeRed_purple); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-blue {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_blue,@codeRed_blue); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-liteblue {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_liteblue,@codeRed_liteblue); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-cyan {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_cyan,@codeRed_cyan); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-teal {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_teal,@codeRed_teal); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-green {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_green,@codeRed_green); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-amber {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_amber,@codeRed_amber); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+		&-grey {
+			&,
+			&-xs,
+			&-sm,
+			&-md,
+			&-lg,
+			&-xl{.codropMixin(#fff,@codeRed_grey,@codeRed_grey); }
+			&-xs {.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-sm; @line-height-sm;); }
+			&-sm {.button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm;); }
+			&-lg {.button-size(@padding-xl-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg;); }
+			&-xl {.button-size(@padding-xl-vertical; @padding-xl-horizontal; @font-size-lg; @line-height-xl;); }
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+
+	}
+
+
+

@@ -1,0 +1,120 @@
+<div style="max-width:100%">
+		<ol class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li class="active">Dashboard</li>
+		</ol>
+		<div class="container-small">
+
+			<div class="row shadow-z-3">
+				<div class="col-lg-4">
+					<ul class="nav sidebar-nav">
+						<li>
+							<a ui-sref="dashboard">Dashboard</a>
+						</li>
+						<li>
+							<a ui-sref="profile">Edit Profile</a>
+						</li>
+						<li>
+							<a ui-sref="accounts">Manage Social Accounts</a>
+						</li>
+						<li data-ng-show="authentication.user.provider === 'local'">
+							<a ui-sref="password">Change Password</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="col-lg-8 wPadding">
+					<div class="row padding">
+						<div class="col-md-6">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-3">
+											<i class="fa fa-comments"></i>
+										</div>
+										<div class="col-xs-9 text-right">
+											<div class="huge">26</div>
+											<div>New Comments!</div>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer">
+										<span class="pull-left">View Details</span>
+										<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-success">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-3">
+											<i class="fa fa-tasks"></i>
+										</div>
+										<div class="col-xs-9 text-right">
+											<div class="huge">12</div>
+											<div>New Tasks!</div>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer">
+										<span class="pull-left">View Details</span>
+										<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-warning">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-3">
+											<i class="fa fa-shopping-cart"></i>
+										</div>
+										<div class="col-xs-9 text-right">
+											<div class="huge">124</div>
+											<div>New Orders!</div>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer">
+										<span class="pull-left">View Details</span>
+										<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-danger">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-3">
+											<i class="fa fa-support"></i>
+										</div>
+										<div class="col-xs-9 text-right">
+											<div class="huge">13</div>
+											<div>Support Tickets!</div>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<div class="panel-footer">
+										<span class="pull-left">View Details</span>
+										<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+										<div class="clearfix"></div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

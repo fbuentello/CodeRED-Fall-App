@@ -11,6 +11,9 @@ module.exports = function(grunt) {
 		clientLESS: ['public/CodeRedAssets/less/**/*.less','public/modules/**/*.less'],
 		mochaTests: ['app/tests/**/*.js']
 	};
+	var compiledFiles = {
+		clientLESS: ['public/CodeRedAssets/less/main.less','public/modules/**/*.less']
+	};
 	grunt.loadNpmTasks('grunt-contrib-less');
 	// Project Configuration
 	grunt.initConfig({
@@ -97,7 +100,7 @@ module.exports = function(grunt) {
 		less: {
           development: {
             files: {
-              'public/less/modules.css': watchFiles.clientLESS
+              'public/less/modules.css': compiledFiles.clientLESS
             }
           }
         },

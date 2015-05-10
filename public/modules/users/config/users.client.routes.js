@@ -7,7 +7,7 @@ angular.module('users').config(['$stateProvider',
 		$stateProvider.
 		state('dashboard', {
 			url: '/dashboard',
-			templateUrl: 'modules/users/views/profile/dashboard.client.view.html'
+			templateUrl: 'modules/users/views/dashboard.client.view.html'
 		}).
 		state('profile', {
 			url: '/settings/profile',
