@@ -27,7 +27,7 @@ angular.module('attendees').controller('AttendeesController', ['$scope', '$state
 			console.log(attendee);
 			// Redirect after save
 			attendee.$save(function(response) {
-				$location.path('attendees/' + response._id);
+				$location.path('attendees/' + response._id+'/thankYou');
 				console.log(attendee);
 				// Clear form fields
 				$scope.attendee = newAttendee;

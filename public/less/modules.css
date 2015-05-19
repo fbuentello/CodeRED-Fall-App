@@ -2305,4 +2305,10 @@ body .nomargin-bottom {
 #createAttendee .cs-skin-border li.cs-focus span {
   background: #f5f3ec;
 }
+#createAttendee .codeREDSubmitBtn {
+  background-color: #c8102e;
+}
+.codeREDLogo {
+  max-width: 1140px;
+}
 

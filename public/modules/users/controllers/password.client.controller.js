@@ -4,6 +4,13 @@ angular.module('users').controller('PasswordController', ['$scope', '$stateParam
 	function($scope, $stateParams, $http, $location, Authentication) {
 		$scope.authentication = Authentication;
 
+
+		/**
+		 * TODO
+		 * delete when app does more than attendee signup
+		 */
+		$location.path('createAttendee');
+
 		//If user is signed in then redirect back home
 		if ($scope.authentication.user) $location.path('/');
 
