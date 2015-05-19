@@ -102,6 +102,11 @@ module.exports = function(grunt) {
             files: {
               'public/less/modules.css': compiledFiles.clientLESS
             }
+          },
+          production: {
+            files: {
+              'public/less/modules.css': compiledFiles.clientLESS
+            }
           }
         },
 		nodemon: {

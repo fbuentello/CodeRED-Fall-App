@@ -2,7 +2,7 @@
 var CodeRED = require('../../CodeREDConfig');
 module.exports = {
 	db: {
-		uri: CodeRED.development.RED_DB,
+		uri: process.production.RED_DB,
 	},
 	log: {
 		// Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
@@ -18,7 +18,8 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				// 'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
-				'public/lib/bootstrap-material-design/dist/css/material.min.css'
+				'public/lib/bootstrap-material-design/dist/css/material.min.css',
+				'public/lib/font-awesome/css/font-awesome.min.css'
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
