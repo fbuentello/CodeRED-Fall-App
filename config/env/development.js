@@ -1,5 +1,5 @@
 'use strict';
-var CodeRED = require('../../CodeREDConfig');
+// var CodeRED = require('../../CodeREDConfig');
 module.exports = {
 	db: {
 		uri: CodeRED.development.RED_DB,
