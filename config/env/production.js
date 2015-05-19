@@ -2,7 +2,7 @@
 // var CodeRED = require('../../CodeREDConfig');
 module.exports = {
 	db: {
-		uri: 'mongodb://fbuentello:meanRepo@ds027758.mongolab.com:27758/meanrepo',
+		uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://fbuentello:meanRepo@ds027758.mongolab.com:27758/meanrepo',
 	},
 	log: {
 		// Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
