@@ -1,0 +1,115 @@
+<div id="createAttendee" class="shadow-z-3" data-ng-controller="AttendeesController">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>New User</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<form name="newAttendee" class="form-horizontal" data-ng-submit="create()" novalidate>
+					<div class="row">
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': firstName}">
+								<input class="input__field input__field--madoka" type="text" id="input-31" ng-model="firstName" required/>
+								<label class="input__label input__label--madoka" for="input-31">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">First Name</span>
+								</label>
+							</span>
+						</div>
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': lastName}">
+								<input class="input__field input__field--madoka" type="text" id="input-32" ng-model="lastName" required/>
+								<label class="input__label input__label--madoka" for="input-32">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">Last Name</span>
+								</label>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': telephone}">
+								<input class="input__field input__field--madoka" type="text" id="input-33" ng-model="telephone" required/>
+								<label class="input__label input__label--madoka" for="input-33">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">Telephone</span>
+								</label>
+							</span>
+						</div>
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': email}">
+								<input class="input__field input__field--madoka" type="text" id="input-34" ng-model="email" required/>
+								<label class="input__label input__label--madoka" for="input-34">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">Email</span>
+								</label>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': gender}">
+								<input class="input__field input__field--madoka" type="text" id="input-35" ng-model="gender" required/>
+								<label class="input__label input__label--madoka" for="input-35">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">Gender</span>
+								</label>
+							</span>
+						</div>
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': school}">
+								<input class="input__field input__field--madoka" type="text" id="input-36" ng-model="school" required/>
+								<label class="input__label input__label--madoka" for="input-36">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">School</span>
+								</label>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': shirt}">
+								<input class="input__field input__field--madoka" type="text" id="input-37" ng-model="shirt" required/>
+								<label class="input__label input__label--madoka" for="input-37">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">Shirt</span>
+								</label>
+							</span>
+						</div>
+						<div class="col-sm-6">
+							<span class="input input--madoka" ng-class="{'input--filled': hearAboutUs}">
+								<input class="input__field input__field--madoka" type="text" id="input-38" ng-model="hearAboutUs" required/>
+								<label class="input__label input__label--madoka" for="input-38">
+									<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+										<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+									</svg>
+									<span class="input__label-content input__label-content--madoka">Hear About Us</span>
+								</label>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<button class="codropBtn" type="submit">Submit</button>
+					</div>
+					<div data-ng-show="error" class="text-danger">
+						<strong style="background-color:white" data-ng-bind="error"></strong>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

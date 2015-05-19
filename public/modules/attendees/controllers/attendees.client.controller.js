@@ -5,30 +5,36 @@ angular.module('attendees').controller('AttendeesController', ['$scope', '$state
 	function($scope, $stateParams, $location, Authentication, Attendees) {
 		$scope.authentication = Authentication;
 
+		var newAttendee = {
+			firstName: '',
+			lastName: '',
+			email: '',
+			links: {
+				resume: '',
+				github: ''
+			},
+			references: '',
+			transportation: '',
+			firstHackathon: false,
+			health_Medical_BioTech_Hack: false,
+			usingHardware: false
+		};
+		$scope.attendee = newAttendee;
 		// Create new Attendee
 		$scope.create = function() {
 			// Create new Attendee object
-			var attendee = new Attendees ({
-				firstName: this.firstName,
-				lastName: this.lastName,
-				telephone: this.telephone,
-				email: this.email,
-				gender: this.gender,
-				school: this.school,
-				shirt: this.shirt,
-				hearAboutUs: this.hearAboutUs
-			});
-
+			var attendee = new Attendees ($scope.attendee);
+			console.log(attendee);
 			// Redirect after save
 			attendee.$save(function(response) {
 				$location.path('attendees/' + response._id);
-
+				console.log(attendee);
 				// Clear form fields
-				$scope.name = '';
+				$scope.attendee = newAttendee;
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
-		};
+};
 
 		// Remove existing Attendee
 		$scope.remove = function(attendee) {
@@ -65,6 +71,9 @@ angular.module('attendees').controller('AttendeesController', ['$scope', '$state
 
 		// Find existing Attendee
 		$scope.findOne = function() {
+			console.log(Attendees.get({
+				attendeeId: $stateParams.attendeeId
+			}));
 			$scope.attendee = Attendees.get({
 				attendeeId: $stateParams.attendeeId
 			});

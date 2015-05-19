@@ -3,14 +3,14 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+ var mongoose = require('mongoose'),
+ Schema = mongoose.Schema;
 
 /**
  * Attendee Schema
  */
-var AttendeeSchema = new Schema({
-	firstName: {
+ var AttendeeSchema = new Schema({
+ 	firstName: {
  		type: String,
  		default: '',
  		required: 'Please fill First name',
@@ -22,22 +22,10 @@ var AttendeeSchema = new Schema({
  		required: 'Please fill Last name',
  		trim: true
  	},
- 	telephone: {
- 		type: String,
- 		default: '',
- 		required: 'Please fill telephone',
- 		trim: true
- 	},
  	email: {
  		type: String,
  		default: '',
  		required: 'Please fill email',
- 		trim: true
- 	},
- 	gender: {
- 		type: String,
- 		default: '',
- 		required: 'Please fill gender',
  		trim: true
  	},
  	school: {
@@ -46,26 +34,31 @@ var AttendeeSchema = new Schema({
  		required: 'Please fill school',
  		trim: true
  	},
- 	shirt: {
+ 	links: {
+ 		github: {
+ 			type: String,
+ 			default: '',
+ 			trim: true
+ 		},
+ 		resume: {
+ 			type: String,
+ 			default: '',
+ 			trim: true
+ 		}
+ 	},
+ 	references: {
  		type: String,
- 		default: '',
- 		required: 'Please fill shirt',
- 		trim: true
+ 		default: ''
  	},
- 	hearAboutUs: {
+ 	transportation: {
  		type: String,
- 		default: '',
- 		required: 'Please fill How did you hear about us',
- 		trim: true
+ 		enum: ['Driving','Riding with Friend','CodeRED Provided Bus','3rd Party Bus','Flight','I live on/near campus','Other'],
+ 		default: ''
  	},
- 	created: {
- 		type: Date,
- 		default: Date.now
- 	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
-	}
-});
+ 	user: {
+ 		type: Schema.ObjectId,
+ 		ref: 'User'
+ 	}
+ });
 
-mongoose.model('Attendee', AttendeeSchema);
+ mongoose.model('Attendee', AttendeeSchema);

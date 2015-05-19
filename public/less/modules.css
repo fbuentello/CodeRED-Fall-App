@@ -856,8 +856,8 @@ body .nomargin-bottom {
 }
 .input__field--ichiro {
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 4%;
+  left: 4%;
   z-index: 100;
   display: block;
   padding: 0 0.55em;
@@ -2086,16 +2086,223 @@ body .nomargin-bottom {
   text-align: center;
   overflow: hidden;
 }
-#createAttendee h1,
-#createAttendee h2,
-#createAttendee h3,
-#createAttendee h4,
-#createAttendee h5,
-#createAttendee h6 {
+#createAttendee h2 {
   color: #c8102e;
 }
-#createAttendee .form-horizontal {
-  background-color: #c8102e;
-  height: 700px;
+#createAttendee .form-horizontal.attendeeForm {
+  height: 100%;
+  padding: 0px 80px;
+  /* Fumi */
+}
+#createAttendee .form-horizontal.attendeeForm .form-control {
+  border: 0;
+  background-image: linear-gradient(#c8102e, #c8102e), linear-gradient(#d2d2d2, #d2d2d2);
+  background-size: 0 2px,100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(99%);
+  background-color: transparent;
+}
+#createAttendee .form-horizontal.attendeeForm .input--fumi {
+  background: #fff;
+  overflow: hidden;
+  padding: 0.75em 0;
+  max-width: 100%;
+}
+#createAttendee .form-horizontal.attendeeForm .input--fumi::after {
+  content: '';
+  width: 1px;
+  position: absolute;
+  top: 0.5em;
+  bottom: 0.5em;
+  left: 3em;
+  background: #f0f0f0;
+  z-index: 100;
+}
+#createAttendee .form-horizontal.attendeeForm .input__field--fumi {
+  background: transparent;
+  padding: 1em 1em 0.25em 3.5em;
+  width: 100%;
+  color: #c8102e;
+}
+#createAttendee .form-horizontal.attendeeForm .input__label--fumi {
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  padding-left: 3.5em;
+  pointer-events: none;
+}
+#createAttendee .form-horizontal.attendeeForm .icon--fumi {
+  width: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.35em 0 0 0;
+}
+#createAttendee .form-horizontal.attendeeForm .input__label-content--fumi {
+  padding: 0.5em 0;
+  display: inline-block;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+#createAttendee .form-horizontal.attendeeForm .input__label-content--fumi span {
+  display: inline-block;
+}
+#createAttendee .form-horizontal.attendeeForm .input__field--fumi:focus + .input__label--fumi .input__label-content--fumi,
+#createAttendee .form-horizontal.attendeeForm .input--filled .input__label-content--fumi {
+  -webkit-animation: anim-fumi-1 0.3s forwards;
+  animation: anim-fumi-1 0.3s forwards;
+}
+@-webkit-keyframes anim-fumi-1 {
+  50% {
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    -webkit-transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+  }
+  100% {
+    color: #a3a3a3;
+    -webkit-transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+  }
+}
+@keyframes anim-fumi-1 {
+  50% {
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    -webkit-transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -3em, 0) scale3d(0.85, 0.85, 1);
+  }
+  100% {
+    color: #a3a3a3;
+    -webkit-transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+    transform: translate3d(0, -1.1em, 0) scale3d(0.85, 0.85, 1);
+  }
+}
+#createAttendee .form-horizontal.attendeeForm .input__field--fumi:focus + .input__label--fumi .icon--fumi,
+#createAttendee .form-horizontal.attendeeForm .input--filled .icon--fumi {
+  -webkit-animation: anim-fumi-2 0.3s forwards;
+  animation: anim-fumi-2 0.3s forwards;
+}
+@-webkit-keyframes anim-fumi-2 {
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.25% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.75% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #c8102e;
+  }
+}
+@keyframes anim-fumi-2 {
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.25% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3em, 0);
+    transform: translate3d(0, -3em, 0);
+  }
+  50.75% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  51% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #c8102e;
+  }
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon/icomoon.eot?-rdnm34');
+  src: url('../fonts/icomoon/icomoon.eot?#iefix-rdnm34') format('embedded-opentype'), url('../fonts/icomoon/icomoon.woff?-rdnm34') format('woff'), url('../fonts/icomoon/icomoon.ttf?-rdnm34') format('truetype'), url('../fonts/icomoon/icomoon.svg?-rdnm34#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#createAttendee div.cs-skin-border {
+  background: transparent;
+  font-size: 2em;
+  font-weight: 700;
+  max-width: 600px;
+}
+@media screen and (max-width: 30em) {
+  #createAttendee .cs-skin-border {
+    font-size: 1em;
+  }
+}
+#createAttendee .cs-skin-border > span {
+  border: 5px solid #000;
+  border-color: inherit;
+  transition: background 0.2s, border-color 0.2s;
+}
+#createAttendee .cs-skin-border > span::after,
+#createAttendee .cs-skin-border .cs-selected span::after {
+  font-family: 'icomoon';
+  content: '\e000';
+}
+#createAttendee .cs-skin-border ul span::after {
+  content: '';
+  opacity: 0;
+}
+#createAttendee .cs-skin-border .cs-selected span::after {
+  content: '\e00e';
+  color: #ddd9c9;
+  font-size: 1.5em;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+#createAttendee .cs-skin-border.cs-active > span {
+  background: #fff;
+  border-color: #fff;
+  color: #2980b9;
+}
+#createAttendee .cs-skin-border .cs-options {
+  color: #2980b9;
+  font-size: 0.75em;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0s 0.2s;
+}
+#createAttendee .cs-skin-border.cs-active .cs-options {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+#createAttendee .cs-skin-border ul span {
+  padding: 1em 2em;
+  backface-visibility: hidden;
+}
+#createAttendee .cs-skin-border .cs-options li span:hover,
+#createAttendee .cs-skin-border li.cs-focus span {
+  background: #f5f3ec;
 }
 

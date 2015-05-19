@@ -7,7 +7,7 @@ module.exports = function(app) {
 	// Attendees Routes
 	app.route('/attendees')
 		.get(attendees.list)
-		.post(users.requiresLogin, attendees.create);
+		.post(attendees.create);
 
 	app.route('/attendees/:attendeeId')
 		.get(attendees.read)

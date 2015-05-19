@@ -17,7 +17,7 @@ module.exports = {
 		lib: {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+				// 'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
 				'public/lib/bootstrap-material-design/dist/css/material.min.css'
 			],
 			js: [

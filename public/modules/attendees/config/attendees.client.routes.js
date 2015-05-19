@@ -20,6 +20,10 @@ angular.module('attendees').config(['$stateProvider',
 		state('editAttendee', {
 			url: '/attendees/:attendeeId/edit',
 			templateUrl: 'modules/attendees/views/edit-attendee.client.view.html'
+		}).
+		state('thankYou', {
+			url: '/attendees/:attendeeId/thankYou',
+			templateUrl: 'modules/attendees/views/thankyou-attendee.client.view.html'
 		});
 	}
 ]);
